@@ -9,7 +9,7 @@ read WEB_DEV_SERVER_PORT
 echo "Enter mock server url (ex:http://10.10.10.10:8080). If no, press Enter to skip."
 read MOCK_API_URL
 
-DOCKER_IMAGE=fayehuang/react-webpackk
+DOCKER_IMAGE=fayehuang/react-webpack
 
 docker run -d \
            -p $SSH_PORT:22 \
