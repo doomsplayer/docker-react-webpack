@@ -21,7 +21,7 @@ WORKDIR /usr/src/app
 RUN wget $PACKAGE_GIT_URL -O ../package.json
 RUN npm install --prefix=../
 COPY webpack-dev-server_start.sh /etc/init.d/webpack-dev-server_start.sh
-
+VOLUME /usr/src/app
 COPY supervisord.conf /etc/supervisord.conf
 EXPOSE 22 8888
 CMD ["/usr/local/bin/supervisord", "-c", "/etc/supervisord.conf"]
